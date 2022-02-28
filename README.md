@@ -9,7 +9,7 @@ npm install
 - create a new .env file in the root directory
 - copy contents of .env.example file and paste in the new .env file
 - replace default parameters with your desired credentials 
-- run the commands `npm run dev ` for development and ` npm start for production `
+- run the commands `npm run dev ` for development and ` npm start for ` production
 
 ## Available endpoints
 - `/api/encode` Encodes a url
