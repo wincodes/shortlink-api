@@ -11,6 +11,7 @@ const ShortlinkSchema = new Schema({
   url: {
     type: String,
     required: true,
+    unique: true
   },
   createdAt: {
     type: Date,
