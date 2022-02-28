@@ -40,7 +40,7 @@ describe("Decode a shortened Url to it original link", () => {
     assert.equal(res.status, 404);
     assert.deepInclude(res.body, {
       status: "failed",
-      message: "Short Link Not Found",
+      message: "Shortlink Not Found",
     });
   });
 
@@ -64,7 +64,6 @@ describe("Decode a shortened Url to it original link", () => {
     assert.equal(res.status, 200);
     assert.equal(res.body.status, "success");
     assert.equal(res.body.message, "Url Decoded Successfully");
-    assert.isOk(res.body.url);
     assert.equal(res.body.url, url);
   });
 });

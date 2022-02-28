@@ -3,8 +3,8 @@ const ShortLinkController = require("./controller/ShortLinkController")
 
 const router = express.Router();
 
-//create fee
 router.post("/encode", ShortLinkController.encode);
+router.post("/decode", ShortLinkController.decode);
 
 
 
