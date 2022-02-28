@@ -84,3 +84,23 @@ exports.decode = async (req, res) => {
     });
   }
 };
+
+exports.statistics = async (req, res) => {
+  try {
+    let { url_path } = req.params;
+
+    const statistics = await Shortlink.findOne({ shortlink: url_path });
+
+    return res.status(200).json({
+      status: "success",
+      message: "Statistics Retrieved Successfully",
+      statistics
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      status: "failed",
+      message: "An Error Occurred Please Try Again",
+    });
+  }
+};

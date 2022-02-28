@@ -29,15 +29,13 @@ describe("Get Statistics of a Url", () => {
 
     const res = await chai.request(server).get(`/api/statistic/${shortlink}`);
 
-    console.log(res.body)
-
     assert.equal(res.status, 200);
     assert.equal(res.body.status, "success");
-    assert.equal(res.body.message, "Url Decoded Successfully");
-    assert.isOk(res.body.data.url);
-    assert.isOk(res.body.data.shortlink);
-    assert.equal(res.body.data.shortlink, shortlink);
-    assert.isOk(res.body.data.createdAt);
-    assert.isOk(res.body.data.updatedAt);
+    assert.equal(res.body.message, "Statistics Retrieved Successfully");
+    assert.isOk(res.body.statistics.url);
+    assert.isOk(res.body.statistics.shortlink);
+    assert.equal(res.body.statistics.shortlink, shortlink);
+    assert.isOk(res.body.statistics.createdAt);
+    assert.isOk(res.body.statistics.updatedAt);
   });
 });
