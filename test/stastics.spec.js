@@ -5,11 +5,8 @@ const chai = require("chai");
 const chaiHttp = require("chai-http");
 const { assert } = chai;
 const server = require("../index");
-const Chance = require("chance");
 const Shortlink = require("../models/shortlinks");
 const ShortLinkFactory = require("../factories/ShortlinkFactory");
-
-const chance = Chance();
 
 chai.use(chaiHttp);
 
