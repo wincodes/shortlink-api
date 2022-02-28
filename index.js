@@ -4,11 +4,9 @@ const routes = require("./routes");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-
-
 // initialize express
 const app = express();
-const { PORT, mongoURI } = process.env
+const { PORT, mongoURI } = process.env;
 
 // allow requests from cross origin
 app.use((req, res, next) => {
@@ -29,9 +27,12 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+const URI =
+  process.env.NODE_ENV === "test" ? process.env.TEST_mongoURI : process.env.mongoURI;
+
 //connect to mongo db
 mongoose
-  .connect(mongoURI, {
+  .connect(URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
@@ -62,6 +63,5 @@ app.use((req, res, next) => {
 app.listen(PORT, () => {
   console.log(`server started at Port ${PORT}`);
 });
-
 
 module.exports = app;
