@@ -11,11 +11,11 @@ npm install
 - replace default parameters with your desired credentials 
 - run the commands `npm run dev ` for development and ` npm start for ` production
 
+## Running Tests
+- Ensure Steps 1 to 3 above are completed
+- run the commands `npm run test `
+
 ## Available endpoints
 - `/api/encode` Encodes a url
 - `/api/decode` Decodes a url
 - `/api/statistics/{url-path}` Retrieves Statistics of a url path
-
-## Running Tests
-- Ensure Steps 1 and 3 above are completed
-- run the commands `npm run test `
