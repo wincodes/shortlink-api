@@ -62,3 +62,6 @@ app.use((req, res, next) => {
 app.listen(PORT, () => {
   console.log(`server started at Port ${PORT}`);
 });
+
+
+module.exports = app;
