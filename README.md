@@ -13,7 +13,7 @@ npm install
 
 ## Running Tests
 - Ensure Steps 1 to 3 above are completed
-- run the commands `npm run test `
+- run the command `npm run test `
 
 ## Available endpoints
 - `/api/encode` Encodes a url
